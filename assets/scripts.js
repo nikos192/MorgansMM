@@ -71,6 +71,8 @@ const loadGoogleReviews = (section) => {
     }
   };
 
+  renderFallback();
+
   if (!window.google || !window.google.maps || !window.google.maps.places) {
     renderFallback();
     return;
@@ -106,7 +108,7 @@ const loadGoogleReviews = (section) => {
         .sort((a, b) => (b.time || 0) - (a.time || 0))
         .slice(0, maxReviews);
 
-      if (reviews.length === 0) {
+      if (reviews.length < maxReviews) {
         renderFallback();
         return;
       }
