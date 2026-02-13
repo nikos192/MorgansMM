@@ -216,15 +216,17 @@ a {
 }
 
 .btn-outline {
-  background: transparent;
-  border-color: var(--black);
-  color: var(--black);
+  background: var(--white);
+  border-color: var(--red);
+  color: var(--red);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
 }
 
 .btn-outline:hover,
 .btn-outline:focus {
-  border-color: var(--red);
-  color: var(--red);
+  background: var(--red);
+  border-color: var(--red-dark);
+  color: var(--white);
 }
 
 .menu-toggle {
